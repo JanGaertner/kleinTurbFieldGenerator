@@ -1,7 +1,10 @@
 > [!NOTE]
 > When using this software please cite this software package with:
 > Gärtner, J. W. Generate turbulent fields with a digital filter (Version 1.0.0) (2024).
-> Available: https://github.com/JanGaertner/kleinTurbFieldGenerator.git
+> doi: https://doi.org/10.5281/zenodo.13956967 Available: https://github.com/JanGaertner/kleinTurbFieldGenerator.git
+
+[![DOI](https://zenodo.org/badge/875547596.svg)](https://doi.org/10.5281/zenodo.13956967)
+
 
 # Turublent Fluctuations using Digital Filters
 
