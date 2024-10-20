@@ -1,8 +1,7 @@
 > [!NOTE]
 > When using this software please cite this software package with:
-> Jan Wilhelm Gärtner, Ali Shamooni, Thorsten Zirwes, Andreas Kronenburg,
-> "A Chemistry Load Balancing Model for OpenFOAM", *Computer Physics Communications*,
-> 2024, doi: 10.1016/j.cpc.2024.109322.
+> Gärtner, J. W. Generate turbulent fields with a digital filter (Version 1.0.0) (2024).
+> Available: https://github.com/JanGaertner/kleinTurbFieldGenerator.git
 
 # Turublent Fluctuations using Digital Filters
 
