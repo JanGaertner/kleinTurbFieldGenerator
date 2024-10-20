@@ -6,7 +6,7 @@
 [![DOI](https://zenodo.org/badge/875547596.svg)](https://doi.org/10.5281/zenodo.13956967)
 
 
-# Turublent Fluctuations using Digital Filters
+# Turbulent Fluctuations using Digital Filters
 
 This tool generates turbulent fluctuations with the proposed model of 
 Klein et al. [1]. However, not for an inlet boundary condition but for a 
