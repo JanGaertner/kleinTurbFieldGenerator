@@ -21,11 +21,11 @@ easy steps:
 
  1. Clone the repository from GitHub with: 
     ```bash
-git clone https://github.com/JanGaertner/kleinTurbFieldGenerator.git
+    git clone https://github.com/JanGaertner/kleinTurbFieldGenerator.git
     ```
  2. Compile the code by executing wmake within the repository:
     ```bash
-wmake src/
+    wmake src/
     ```
 
 ## Usage 
