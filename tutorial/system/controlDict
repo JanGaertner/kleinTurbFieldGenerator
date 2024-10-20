@@ -1,0 +1,40 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  1.6                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     mmcDropletFoam;
+startFrom            startTime;
+startTime                    0;
+stopAt                 endTime;
+
+endTime         3.84000000e-03;  // 40*tj
+deltaT                 1.0e-06;  // approx. 0.01*tj
+writeControl adjustableRunTime;
+writeInterval   9.60000000e-04;  // 1*tj
+
+purgeWrite                   0;
+writeFormat              ascii;
+writePrecision               8;
+writeCompression           off;
+runTimeModifiable          yes;
+adjustTimeStep            true;
+maxCo                      0.4;
+
+libs
+(
+);
+
+// ************************************************************************* //

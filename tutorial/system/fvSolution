@@ -1,0 +1,127 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.1.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSolution;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+solvers
+{
+    rho
+    {
+        solver          diagonal;
+        tolerance       1e-06;
+        relTol          0.01;
+    }
+
+    rhoFinal
+    {
+        $rho;
+        tolerance       1e-08;
+        relTol          0.0;
+    }
+
+    p
+    {
+        solver           PCG;
+        preconditioner   DIC;
+        tolerance        1e-06;
+        relTol           0.01;
+    }
+
+    pFinal
+    {
+        $p;
+        tolerance        1e-06;
+        relTol           0.0;
+    }
+
+    U
+    {
+        solver          PBiCGStab;
+        preconditioner  DILU;
+        tolerance       1e-06;
+        relTol          0.01;
+    }
+
+    UFinal
+    {
+        solver          PBiCGStab;
+        preconditioner  DILU;
+        tolerance       1e-08;
+        relTol          0.0;
+    }
+
+    h
+    {
+        solver          PBiCGStab;
+        preconditioner  DILU;
+        tolerance       1e-06;
+        relTol          0.01;
+    }
+
+    hFinal
+    {
+        solver          PBiCGStab;
+        preconditioner  DILU;
+        tolerance       1e-08;
+        relTol          0.0;
+    }
+
+    "(Xii|Yi)"
+    {
+        solver          PBiCGStab;
+        preconditioner  DILU;
+        tolerance       1e-06;
+        relTol          0.01;
+    }
+
+    "(Xii|Yi)Final"
+    {
+        solver          PBiCGStab;
+        preconditioner  DILU;
+        tolerance       1e-08;
+        relTol          0.0;
+    }
+
+}
+
+PIMPLE
+{
+    nCorrectors              2;
+    nNonOrthogonalCorrectors 0;  // not needed here
+    nOuterCorrectors         5;  // 1=PISO, >1=PIMPLE
+    momentumPredictor     true;
+
+    residualControl
+    {
+        "(p|rho|U|h|Xii|Yi)"
+        {
+            tolerance    1e-03;
+            relTol       0.0;
+        }
+    }
+}
+
+PDFMETHOD
+{
+  pdfMethodOn       true;
+  iniReleaseOn      true;
+  nSet              1;
+  pdfScatPlotOn     false;
+  pdfScatPlotSize   5000;  
+}
+
+
+// ************************************************************************* //

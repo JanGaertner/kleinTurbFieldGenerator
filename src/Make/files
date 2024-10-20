@@ -1,4 +1,4 @@
 aveBox/aveBox.C
 turbGenerator/turbGenerator.C
 
-EXE = $(FOAM_USER_APPBIN)/turbGenerator
+EXE = $(FOAM_USER_APPBIN)/kleinTurbFieldGenerator

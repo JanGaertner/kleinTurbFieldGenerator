@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: Generate turbulent fields with a digital filter
+message: 'If you use this software, please cite it as below'
+url: "https://github.com/JanGaertner/kleinTurbFieldGenerator.git"
+authors:
+  - given-names: Jan Wilhelm
+    family-names: Gärtner
+    email: jan-wilhelm.gaertner@irst.uni-stuttgart.de
+    affiliation: 'University of Stuttgart'
+    orcid: "https://orcid.org/0000-0002-1718-7735"
+version: 1.0.0
+year: 2024
+doi: ""
